@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Wedding Guest Manager | Musa & Laiba
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOGIN
+====================================================== -->
+
+<section
+    class="login-screen"
+    id="loginScreen"
+>
+
+    <div class="login-card">
+
+        <p class="brand-small">
+            MUSA &amp; LAIBA
+        </p>
+
+        <div class="ornament">
+            <span></span>
+            <i>✦</i>
+            <span></span>
+        </div>
+
+        <h1>
+            Wedding Guest
+            <em>Manager</em>
+        </h1>
+
+        <p class="login-intro">
+            Private administration portal
+        </p>
+
+
+        <form id="loginForm">
+
+            <label for="loginEmail">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                autocomplete="username"
+                required
+            >
+
+
+            <label for="loginPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                autocomplete="current-password"
+                required
+            >
+
+
+            <p
+                class="form-error"
+                id="loginError"
+            ></p>
+
+
+            <button
+                class="primary-button full-button"
+                type="submit"
+                id="loginButton"
+            >
+                Sign In
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD
+====================================================== -->
+
+<main
+    class="dashboard hidden"
+    id="dashboard"
+>
+
+
+    <!-- HEADER -->
+
+    <header class="admin-header">
+
+        <div>
+
+            <p class="brand-small">
+                MUSA &amp; LAIBA
+            </p>
+
+            <h1>
+                Guest Manager
+            </h1>
+
+        </div>
+
+
+        <button
+            class="secondary-button"
+            id="signOutButton"
+            type="button"
+        >
+            Sign Out
+        </button>
+
+    </header>
+
+
+
+    <div class="dashboard-content">
+
+
+        <!-- INTRO -->
+
+        <section class="dashboard-intro">
+
+            <div>
+
+                <p class="section-label">
+                    WEDDING ADMINISTRATION
+                </p>
+
+                <h2>
+                    Your Guest List
+                </h2>
+
+                <p>
+                    Manage invitations and event access
+                    from one place.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="addGuestButton"
+                type="button"
+            >
+                + Add Guest
+            </button>
+
+        </section>
+
+
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <span>Total Guests</span>
+                <strong id="totalGuests">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Nikkah</span>
+                <strong id="nikkahCount">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Mehndi</span>
+                <strong id="mehndiCount">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Barat</span>
+                <strong id="baratCount">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span>Walima</span>
+                <strong id="walimaCount">0</strong>
+            </article>
+
+        </section>
+
+
+
+        <!-- SEARCH -->
+
+        <section class="toolbar">
+
+            <div class="search-wrapper">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="guestSearch"
+                    placeholder="Search by guest name or invitation code..."
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GUEST TABLE -->
+
+        <section class="guest-panel">
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Guest / Family</th>
+                            <th>Invitation Code</th>
+                            <th>Events</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="guestTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                class="empty-state hidden"
+                id="emptyState"
+            >
+
+                <div>◇</div>
+
+                <h3>
+                    No Guests Found
+                </h3>
+
+                <p>
+                    Add your first wedding guest
+                    to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     ADD / EDIT GUEST MODAL
+====================================================== -->
+
+<div
+    class="modal-backdrop hidden"
+    id="guestModal"
+>
+
+    <section class="modal-card">
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="section-label">
+                    INVITATION DETAILS
+                </p>
+
+                <h2 id="modalTitle">
+                    Add Guest
+                </h2>
+
+            </div>
+
+
+            <button
+                class="close-button"
+                id="closeModalButton"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="guestForm">
+
+
+            <div class="form-group">
+
+                <label for="guestNameInput">
+                    Guest / Family Name
+                </label>
+
+                <input
+                    type="text"
+                    id="guestNameInput"
+                    placeholder="e.g. Mr. & Mrs. Asim Gulzar"
+                    maxlength="150"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Invited Events
+                </label>
+
+                <div class="event-options">
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            id="eventNikkah"
+                        >
+
+                        <span>
+                            <strong>Nikkah</strong>
+                            <small>07 Jan 2027</small>
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            id="eventMehndi"
+                        >
+
+                        <span>
+                            <strong>Mehndi</strong>
+                            <small>07 Jan 2027</small>
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            id="eventBarat"
+                        >
+
+                        <span>
+                            <strong>Barat</strong>
+                            <small>08 Jan 2027</small>
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="event-option">
+
+                        <input
+                            type="checkbox"
+                            id="eventWalima"
+                        >
+
+                        <span>
+                            <strong>Walima</strong>
+                            <small>09 Jan 2027</small>
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="code-preview"
+                id="codePreviewWrapper"
+            >
+
+                <span>
+                    Invitation Code
+                </span>
+
+                <strong id="codePreview">
+                    Generated automatically
+                </strong>
+
+            </div>
+
+
+
+            <p
+                class="form-error"
+                id="guestFormError"
+            ></p>
+
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="secondary-button"
+                    id="cancelGuestButton"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    class="primary-button"
+                    id="saveGuestButton"
+                    type="submit"
+                >
+                    Save Guest
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</div>
+
+
+
+<!-- =====================================================
+     DELETE CONFIRMATION
+====================================================== -->
+
+<div
+    class="modal-backdrop hidden"
+    id="deleteModal"
+>
+
+    <section class="modal-card delete-card">
+
+        <p class="delete-symbol">
+            ◇
+        </p>
+
+        <h2>
+            Delete Guest?
+        </h2>
+
+        <p>
+            This invitation link will immediately
+            stop working.
+        </p>
+
+
+        <strong
+            class="delete-name"
+            id="deleteGuestName"
+        ></strong>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="secondary-button"
+                id="cancelDeleteButton"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="danger-button"
+                id="confirmDeleteButton"
+                type="button"
+            >
+                Delete Guest
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+
+<!-- SUPABASE -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
