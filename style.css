@@ -938,6 +938,42 @@ body {
     color: var(--ivory);
 }
 
+/* =========================================================
+   BARAT GUEST LIMIT
+========================================================= */
+
+.guest-event-limit {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--gold-light);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.43rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.12rem;
+
+    text-transform: uppercase;
+
+    opacity: 0.82;
+}
+
+.guest-event-restricted {
+    border-color: rgba(196, 165, 106, 0.42);
+}
+
+.guest-event-restricted .guest-event-limit::before {
+    content: "— ";
+}
+
+.guest-event-restricted .guest-event-limit::after {
+    content: " —";
+}
 
 /* =========================================================
    BACKGROUND PATTERN

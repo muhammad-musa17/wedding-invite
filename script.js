@@ -263,16 +263,30 @@ function renderGuestEvents(events) {
         eventElement.className =
             "guest-event";
 
+            if (eventKey === "barat") {
+    eventElement.classList.add("guest-event-restricted");
+}
+
 
         eventElement.innerHTML = `
-            <span class="guest-event-symbol">
-                ${event.symbol || "✦"}
-            </span>
+    <span class="guest-event-symbol">
+        ${event.symbol || "✦"}
+    </span>
 
-            <span class="guest-event-name">
-                ${event.title}
-            </span>
-        `;
+    <span class="guest-event-name">
+        ${event.title}
+    </span>
+
+    ${
+        eventKey === "barat"
+            ? `
+                <span class="guest-event-limit">
+                    2 PERSONS ONLY
+                </span>
+              `
+            : ""
+    }
+`;
 
 
         guestEvents.appendChild(
