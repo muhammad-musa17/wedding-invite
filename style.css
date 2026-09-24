@@ -9899,3 +9899,514 @@ body {
         max-width: 115px;
     }
 }
+/* =========================================================
+   BARAT — PROGRAMME
+   Isolated addition to existing Barat section
+========================================================= */
+
+.barat-programme {
+    width: min(760px, 90%);
+    margin: 46px auto 40px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   2 PERSONS NOTICE
+========================================================= */
+
+.barat-attendance-notice {
+    width: min(500px, 100%);
+
+    margin: 0 auto 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.barat-notice-line {
+    width: 58px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(211, 168, 91, 0.65)
+        );
+}
+
+.barat-notice-line:last-child {
+    transform: scaleX(-1);
+}
+
+.barat-notice-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.barat-notice-small {
+    color: rgba(239, 224, 198, 0.52);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    letter-spacing: 0.27em;
+}
+
+.barat-notice-content strong {
+    color: var(--gold);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.24em;
+}
+
+
+/* =========================================================
+   PROGRAMME HEADING
+========================================================= */
+
+.barat-programme-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.barat-programme-heading span {
+    width: 48px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(211, 168, 91, 0.55)
+        );
+}
+
+.barat-programme-heading span:last-child {
+    transform: scaleX(-1);
+}
+
+.barat-programme-heading p {
+    margin: 0;
+
+    color: rgba(211, 168, 91, 0.82);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+
+    letter-spacing: 0.35em;
+}
+
+
+/* =========================================================
+   THREE PROGRAMME ITEMS
+========================================================= */
+
+.barat-programme-times {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr;
+
+    align-items: center;
+
+    gap: 26px;
+
+    margin: 0 auto;
+}
+
+.barat-programme-divider {
+    width: 1px;
+    height: 115px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(211, 168, 91, 0.38),
+            transparent
+        );
+}
+
+.barat-programme-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+}
+
+.barat-programme-number {
+    margin-bottom: 9px;
+
+    color: rgba(211, 168, 91, 0.35);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.55rem;
+
+    letter-spacing: 0.28em;
+}
+
+.barat-programme-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(211, 168, 91, 0.25);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 0.95rem;
+}
+
+.barat-programme-time {
+    margin: 0 0 5px;
+
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.barat-programme-item h4 {
+    margin: 0 0 5px;
+
+    color: rgba(255, 248, 235, 0.90);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.67rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.19em;
+}
+
+.barat-programme-note {
+    margin: 0;
+
+    color: rgba(239, 224, 198, 0.48);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 0.88rem;
+
+    font-style: italic;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   COUPLE ART AREA
+========================================================= */
+
+.barat-couple-art {
+    position: relative;
+
+    width: min(330px, 80%);
+
+    min-height: 225px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barat-couple-halo {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    border:
+        1px solid
+        rgba(211, 168, 91, 0.15);
+
+    border-radius: 50%;
+}
+
+.barat-couple-halo::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(211, 168, 91, 0.08);
+
+    border-radius: inherit;
+}
+
+.barat-couple-placeholder {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+.barat-couple-monogram {
+    color: rgba(255, 248, 235, 0.82);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3.2rem;
+
+    font-weight: 400;
+}
+
+.barat-couple-monogram span {
+    color: var(--gold);
+
+    font-size: 1.6rem;
+
+    font-style: italic;
+}
+
+.barat-couple-placeholder p {
+    margin: 8px 0 0;
+
+    color: rgba(211, 168, 91, 0.52);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.54rem;
+
+    letter-spacing: 0.27em;
+}
+
+
+/* =========================================================
+   BARAT PROGRAMME — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .barat-programme {
+        width: 88%;
+
+        margin:
+            34px
+            auto
+            30px;
+    }
+
+
+    /* Attendance notice */
+
+    .barat-attendance-notice {
+        margin-bottom: 31px;
+
+        gap: 11px;
+    }
+
+    .barat-notice-line {
+        width: 28px;
+    }
+
+    .barat-notice-small {
+        font-size: 0.48rem;
+
+        letter-spacing: 0.22em;
+    }
+
+    .barat-notice-content strong {
+        font-size: 0.61rem;
+
+        letter-spacing: 0.19em;
+    }
+
+
+    /* Heading */
+
+    .barat-programme-heading {
+        margin-bottom: 27px;
+
+        gap: 10px;
+    }
+
+    .barat-programme-heading span {
+        width: 24px;
+    }
+
+    .barat-programme-heading p {
+        font-size: 0.51rem;
+
+        letter-spacing: 0.25em;
+    }
+
+
+    /*
+       Mobile becomes a vertical programme.
+       Much easier to read than squeezing
+       all three times into one row.
+    */
+
+    .barat-programme-times {
+        width: min(270px, 100%);
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .barat-programme-item {
+        width: 100%;
+
+        padding:
+            0
+            0
+            23px;
+    }
+
+    .barat-programme-divider {
+        width: 1px;
+        height: 27px;
+
+        margin:
+            -13px
+            auto
+            13px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(211, 168, 91, 0.06),
+                rgba(211, 168, 91, 0.50),
+                rgba(211, 168, 91, 0.06)
+            );
+    }
+
+    .barat-programme-number {
+        margin-bottom: 6px;
+
+        font-size: 0.48rem;
+    }
+
+    .barat-programme-icon {
+        width: 39px;
+        height: 39px;
+
+        margin-bottom: 8px;
+
+        font-size: 0.82rem;
+    }
+
+    .barat-programme-time {
+        margin-bottom: 4px;
+
+        font-size: 1.42rem;
+    }
+
+    .barat-programme-item h4 {
+        margin-bottom: 4px;
+
+        font-size: 0.6rem;
+
+        letter-spacing: 0.17em;
+    }
+
+    .barat-programme-note {
+        font-size: 0.79rem;
+    }
+
+
+    /* Couple area */
+
+    .barat-couple-art {
+        width: 230px;
+
+        min-height: 180px;
+
+        margin-top: 18px;
+    }
+
+    .barat-couple-halo {
+        width: 165px;
+        height: 165px;
+    }
+
+    .barat-couple-monogram {
+        font-size: 2.65rem;
+    }
+
+    .barat-couple-monogram span {
+        font-size: 1.3rem;
+    }
+
+    .barat-couple-placeholder p {
+        font-size: 0.46rem;
+
+        letter-spacing: 0.21em;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .barat-programme {
+        width: 91%;
+    }
+
+    .barat-programme-heading p {
+        font-size: 0.47rem;
+
+        letter-spacing: 0.21em;
+    }
+
+    .barat-programme-times {
+        width: 245px;
+        max-width: 100%;
+    }
+
+    .barat-couple-art {
+        width: 210px;
+    }
+}
