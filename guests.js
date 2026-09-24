@@ -46,21 +46,23 @@ const weddingEvents = {
 },
 
     barat: {
-        title: "Barat",
-        symbol: "✧",
-        day: "FRIDAY",
-        date: "08 JANUARY 2027",
-        time: "07:00 PM",
-        venue: "ATLANTIS MARQUEES",
-        address: "Main Grand Trunk Rd, next to Allama Iqbal Hospital, Chand Da Qila, Gujranwala, 52250, Pakistan",
-        mapUrl: "https://maps.app.goo.gl/gJTGQChMaEVJhBbC9",
+    title: "Barat",
+    symbol: "✧",
+    day: "FRIDAY",
+    date: "08 JANUARY 2027",
 
-        calendar: {
-    date: "2027-01-08",
-    startTime: "19:00",
-    durationHours: 4
-}
-    },
+    venue: "ATLANTIS MARQUEES",
+
+    address: "Main Grand Trunk Rd, next to Allama Iqbal Hospital, Chand Da Qila, Gujranwala, 52250, Pakistan",
+
+    mapUrl: "https://maps.app.goo.gl/gJTGQChMaEVJhBbC9",
+
+    calendar: {
+        date: "2027-01-08",
+        startTime: "16:00",
+        durationHours: 6
+    }
+},
 
     walima: {
         title: "Walima",

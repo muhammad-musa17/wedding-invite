@@ -516,12 +516,6 @@ function loadBaratData() {
 
 
     document.getElementById(
-        "baratTime"
-    ).textContent =
-        event.time;
-
-
-    document.getElementById(
         "baratVenue"
     ).textContent =
         event.venue;

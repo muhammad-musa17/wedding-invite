@@ -4495,16 +4495,18 @@ body {
 ========================================================= */
 
 .barat-date-card {
-    max-width: 590px;
+    max-width: 520px;
 
     display: grid;
 
+    /* Now only:
+       FRIDAY | 08 JANUARY 2027
+    */
     grid-template-columns:
-        1fr
-        1.45fr
-        1fr;
+        0.85fr
+        1.65fr;
 
-    align-items: center;
+    align-items: stretch;
 
     margin:
         42px auto
@@ -4523,7 +4525,24 @@ body {
 }
 
 
+/* LEFT — DAY */
+
+.barat-date-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0 20px;
+
+    text-align: center;
+}
+
+
 .barat-date-side p {
+    margin: 0;
+
     color: #f2dfc2;
 
     font-family:
@@ -4531,6 +4550,8 @@ body {
         serif;
 
     font-size: 1.15rem;
+
+    line-height: 1.1;
 }
 
 
@@ -4547,21 +4568,32 @@ body {
 }
 
 
+/* RIGHT — DATE */
+
 .barat-date-centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
     padding:
-        0 20px;
+        0 24px;
 
     border-left:
         1px solid
         rgba(210, 162, 82, 0.16);
 
-    border-right:
-        1px solid
-        rgba(210, 162, 82, 0.16);
+    /* No right border now because
+       there is no third column */
+    border-right: 0;
+
+    text-align: center;
 }
 
 
 .barat-date-centre span {
+    flex: 0 0 auto;
+
     color:
         rgba(
             216,
@@ -4575,7 +4607,7 @@ body {
 
 
 .barat-date-centre h3 {
-    margin: 7px 0;
+    margin: 0;
 
     color: #fff0d9;
 
@@ -4588,6 +4620,127 @@ body {
     font-weight: 500;
 
     line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .barat-date-card {
+        width: min(88%, 320px);
+
+        grid-template-columns:
+            0.78fr
+            1.55fr;
+
+        margin-top: 30px;
+
+        padding:
+            18px 0;
+    }
+
+
+    .barat-date-side {
+        padding:
+            0 10px;
+    }
+
+
+    
+    .barat-date-side p {
+        font-size: 0.82rem;
+    }
+
+
+    .barat-date-side span {
+        margin-top: 4px;
+
+        font-size: 0.35rem;
+
+        letter-spacing: 0.11rem;
+    }
+
+
+    .barat-date-centre {
+        gap: 7px;
+
+        padding:
+            0 10px;
+    }
+
+
+    .barat-date-centre span {
+        font-size: 0.3rem;
+    }
+
+
+    .barat-date-centre h3 {
+        font-size: 0.91rem;
+
+        line-height: 1.15;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 390px) {
+
+   .barat-date-card {
+        width: 92%;
+
+        grid-template-columns:
+            0.75fr
+            1.55fr;
+
+        padding:
+            16px 0;
+    }
+
+
+    .barat-date-side {
+        padding:
+            0 7px;
+    }
+
+
+    .barat-date-side p {
+        font-size: 0.76rem;
+    }
+
+
+    .barat-date-side span {
+        font-size: 0.31rem;
+
+        letter-spacing: 0.08rem;
+    }
+
+
+    .barat-date-centre {
+        gap: 5px;
+
+        padding:
+            0 7px;
+    }
+
+
+    .barat-date-centre h3 {
+        font-size: 0.82rem;
+    }
+
+
+    .barat-date-centre span {
+        font-size: 0.27rem;
+    }
+
 }
 
 
@@ -4968,9 +5121,17 @@ body {
     }
 
 
-    .barat-date-card {
+     .barat-date-card {
+        width: min(88%, 320px);
+
         grid-template-columns:
-            1fr 1.35fr 1fr;
+            0.78fr
+            1.55fr;
+
+        margin-top: 30px;
+
+        padding:
+            18px 0;
     }
 
 
