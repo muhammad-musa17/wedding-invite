@@ -7693,31 +7693,29 @@ body {
 }
 
 /* =========================================================
-   INTRO — FORMAL FAMILY INVITATION REFINEMENT
+   INTRO — FORMAL FAMILY INVITATION
    ========================================================= */
 
-/* Give the expanded invitation composition enough breathing room */
 .intro {
-    padding: 72px 20px 58px;
+    min-height: 100svh;
+    padding: 48px 20px 42px;
 }
 
 .intro-content {
-    width: min(760px, 90vw);
+    width: min(720px, 88vw);
 }
 
 
-/* ---------------------------------------------------------
-   GROOM'S FAMILY / HOSTS
-   --------------------------------------------------------- */
+/* FAMILY HOSTS */
 
 .intro-hosts {
-    margin: 2px auto 20px;
+    margin: 0 auto 16px;
     text-align: center;
 }
 
 .intro-grandparents,
 .intro-parents {
-    color: rgba(255, 250, 241, 0.92);
+    color: rgba(255, 250, 241, 0.84);
 
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
@@ -7726,73 +7724,60 @@ body {
 }
 
 .intro-grandparents {
-    font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+    font-size: clamp(1.08rem, 1.7vw, 1.32rem);
 }
 
 .intro-parents {
-    font-size: clamp(1.35rem, 2.7vw, 1.8rem);
+    font-size: clamp(1.08rem, 1.7vw, 1.32rem);
 }
 
 .host-ampersand {
-    display: inline-block;
-
-    margin: 0 7px;
-
     color: var(--gold);
-
     font-style: italic;
 }
 
 .intro-together {
-    margin: 6px 0 4px;
+    margin: 2px 0;
+
+    color: rgba(245, 239, 228, 0.44);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.86rem;
+    font-style: italic;
+}
+
+
+/* FORMAL INVITATION LINE */
+
+.intro-formal-copy {
+    max-width: 520px;
+
+    margin: 0 auto 13px;
 
     color: rgba(245, 239, 228, 0.48);
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 0.92rem;
-    font-style: italic;
+    font-size: 0.95rem;
 
-    letter-spacing: 0.04em;
+    line-height: 1.45;
 }
 
 
-/* ---------------------------------------------------------
-   FORMAL INVITATION WORDING
-   --------------------------------------------------------- */
-
-.intro-formal-copy {
-    max-width: 470px;
-
-    margin: 0 auto 19px;
-
-    color: rgba(245, 239, 228, 0.58);
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1rem;
-
-    line-height: 1.55;
-}
-
-.intro-formal-copy span {
-    display: block;
-}
-
-
-/* ---------------------------------------------------------
-   COUPLE
-   --------------------------------------------------------- */
+/* COUPLE */
 
 .intro-couple-formal {
-    margin: 0 auto 25px;
+    margin: 0 auto;
 }
 
 .intro-couple-formal .groom-name,
 .intro-couple-formal .bride-name {
+    margin: 0;
+
     color: var(--ivory-light);
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(2.55rem, 5.6vw, 4.25rem);
+    font-size: clamp(2.65rem, 5vw, 3.9rem);
 
     font-weight: 400;
 
@@ -7802,61 +7787,74 @@ body {
 }
 
 
-/* WITH instead of the old large italic ampersand */
+/* WITH */
+
 .intro-couple-formal .intro-with {
-    margin: 12px 0 10px;
+    margin: 10px 0;
 
     color: var(--gold);
 
-    font-family: "Manrope", sans-serif;
+    font-family: "Cormorant Garamond", serif;
 
-    font-size: 0.55rem;
-    font-style: normal;
-    font-weight: 500;
-
-    letter-spacing: 0.30rem;
-
-    text-transform: uppercase;
-}
-
-
-/* ---------------------------------------------------------
-   BRIDE'S FAMILY
-   --------------------------------------------------------- */
-
-.bride-family {
-    text-align: center;
-}
-
-.daughter-of {
-    margin-top: 10px;
-
-    color: rgba(245, 239, 228, 0.46) !important;
-
-    font-family: "Cormorant Garamond", serif !important;
-
-    font-size: 0.88rem !important;
+    font-size: 1.05rem;
 
     font-style: italic;
 
-    line-height: 1.3 !important;
+    line-height: 1;
 }
 
-.bride-parents {
-    margin-top: 3px;
 
-    color: rgba(245, 239, 228, 0.78) !important;
+/* BRIDE PARENTS — intentionally subtle */
+
+.bride-family {
+    margin-top: 9px;
+}
+
+.daughter-of {
+    display: inline !important;
+
+    margin: 0 !important;
+
+    color: rgba(245, 239, 228, 0.43) !important;
 
     font-family: "Cormorant Garamond", serif !important;
 
-    font-size: clamp(1.15rem, 2.4vw, 1.5rem) !important;
+    font-size: 0.9rem !important;
 
-    line-height: 1.25 !important;
+    font-style: italic;
+
+    font-weight: 400 !important;
+
+    line-height: 1.4 !important;
+}
+
+.bride-parents {
+    display: inline !important;
+
+    margin: 0 0 0 4px !important;
+
+    color: rgba(245, 239, 228, 0.70) !important;
+
+    font-family: "Cormorant Garamond", serif !important;
+
+    font-size: 0.94rem !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.4 !important;
+}
+
+
+/* OPEN BUTTON */
+
+.intro-couple-formal + .open-invitation,
+.intro-hosts ~ .open-invitation {
+    margin-top: 22px;
 }
 
 
 /* =========================================================
-   INTRO — MOBILE REFINEMENT
+   MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
@@ -7865,9 +7863,9 @@ body {
         min-height: 100svh;
 
         padding:
-            54px
-            18px
-            45px;
+            44px
+            17px
+            35px;
     }
 
     .intro-content {
@@ -7875,128 +7873,130 @@ body {
     }
 
     .invitation-label {
-        margin-bottom: 20px;
+        margin-bottom: 17px;
+    }
+
+    .bismillah-symbol {
+        font-size: clamp(1.9rem, 8vw, 2.5rem);
+        line-height: 1.35;
     }
 
     .bismillah-translation {
-        margin-top: 9px;
+        max-width: 280px;
+
+        margin-top: 7px;
+
+        font-size: 0.79rem;
+
+        line-height: 1.35;
     }
 
     .ornamental-divider {
-        margin: 18px auto;
+        margin: 15px auto 17px;
     }
 
 
-    /* Hosts */
+    /* Family */
 
     .intro-hosts {
-        margin-bottom: 14px;
+        margin-bottom: 11px;
     }
 
-    .intro-grandparents {
-        font-size: 1.12rem;
-    }
-
+    .intro-grandparents,
     .intro-parents {
-        font-size: 1.2rem;
+        font-size: 0.98rem;
+        line-height: 1.2;
     }
 
     .intro-together {
-        margin: 4px 0 3px;
+        margin: 1px 0;
 
-        font-size: 0.8rem;
+        font-size: 0.72rem;
     }
 
 
     /* Invitation wording */
 
     .intro-formal-copy {
-        max-width: 315px;
+        max-width: 305px;
 
-        margin-bottom: 15px;
+        margin-bottom: 10px;
 
-        font-size: 0.88rem;
+        font-size: 0.78rem;
 
-        line-height: 1.45;
+        line-height: 1.35;
     }
 
 
-    /* Couple */
-
-    .intro-couple-formal {
-        margin-bottom: 20px;
-    }
+    /* Couple names */
 
     .intro-couple-formal .groom-name,
     .intro-couple-formal .bride-name {
-        font-size: clamp(
-            2.15rem,
-            10.5vw,
-            3.1rem
-        );
+        font-size: clamp(2.05rem, 10vw, 2.75rem);
 
-        line-height: 0.94;
+        line-height: 0.96;
     }
 
     .intro-couple-formal .intro-with {
-        margin: 9px 0 8px;
+        margin: 8px 0;
 
-        font-size: 0.48rem;
+        font-size: 0.88rem;
+    }
 
-        letter-spacing: 0.25rem;
+
+    /* Bride parents */
+
+    .bride-family {
+        max-width: 290px;
+
+        margin:
+            7px
+            auto
+            0;
+
+        line-height: 1.3;
     }
 
     .daughter-of {
-        margin-top: 7px;
-
-        font-size: 0.78rem !important;
+        font-size: 0.76rem !important;
     }
 
     .bride-parents {
-        margin-top: 2px;
-
-        font-size: 1.05rem !important;
+        font-size: 0.79rem !important;
     }
 
-
-    /* Keep button comfortable but compact */
-
     .open-invitation {
-        margin-bottom: 8px;
+        margin-top: 18px;
+        margin-bottom: 5px;
     }
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
+/* VERY SMALL MOBILE */
 
 @media (max-width: 390px) {
 
-    .intro {
-        padding-top: 48px;
-    }
-
-    .intro-grandparents {
-        font-size: 1.02rem;
-    }
-
+    .intro-grandparents,
     .intro-parents {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .intro-formal-copy {
-        max-width: 290px;
+        max-width: 285px;
 
-        font-size: 0.83rem;
+        font-size: 0.73rem;
     }
 
     .intro-couple-formal .groom-name,
     .intro-couple-formal .bride-name {
-        font-size: 2.15rem;
+        font-size: 2rem;
+    }
+
+    .daughter-of {
+        font-size: 0.72rem !important;
     }
 
     .bride-parents {
-        font-size: 0.98rem !important;
+        font-size: 0.75rem !important;
     }
 }
