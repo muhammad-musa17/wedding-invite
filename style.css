@@ -9798,3 +9798,104 @@ body {
 
     z-index: -1;
 }
+
+/* =========================================================
+   MEHNDI ROADMAP — FINAL MOBILE SPACING POLISH
+   Desktop remains completely unchanged
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /*
+       Give the roadmap a little internal breathing room
+       without changing the overall Mehndi section.
+    */
+    .mehndi-roadmap {
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*
+       Slightly narrower stop groups prevent copy from
+       competing with the route/icon on narrow screens.
+    */
+    .mehndi-stop {
+        width: 220px;
+        gap: 13px;
+    }
+
+    /*
+       Evening begins:
+       retain centred composition.
+    */
+    .mehndi-stop-one {
+        left: 50%;
+    }
+
+    /*
+       Mehndi Rasam:
+       move slightly inward from the left edge.
+    */
+    .mehndi-stop-two {
+        left: 5px;
+    }
+
+    /*
+       Dinner:
+       move slightly inward from the right edge.
+    */
+    .mehndi-stop-three {
+        right: 5px;
+    }
+
+    /*
+       Qawwali:
+       move slightly inward from the left edge.
+    */
+    .mehndi-stop-four {
+        left: 5px;
+    }
+
+    /*
+       Keep programme text compact but readable.
+    */
+    .mehndi-stop-copy {
+        min-width: 120px;
+    }
+
+    .mehndi-stop-copy h4 {
+        line-height: 1;
+    }
+
+    .mehndi-stop-note {
+        max-width: 120px;
+        line-height: 1.2;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .mehndi-stop {
+        width: 210px;
+        gap: 10px;
+    }
+
+    .mehndi-stop-two,
+    .mehndi-stop-four {
+        left: 2px;
+    }
+
+    .mehndi-stop-three {
+        right: 2px;
+    }
+
+    .mehndi-stop-copy {
+        min-width: 115px;
+    }
+
+    .mehndi-stop-note {
+        max-width: 115px;
+    }
+}
