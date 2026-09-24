@@ -4495,16 +4495,14 @@ body {
 ========================================================= */
 
 .barat-date-card {
-    max-width: 520px;
+    max-width: 500px;
 
     display: grid;
 
     /* Now only:
        FRIDAY | 08 JANUARY 2027
     */
-    grid-template-columns:
-        0.85fr
-        1.65fr;
+    grid-template-columns: 1fr 1fr;
 
     align-items: stretch;
 
@@ -4634,9 +4632,7 @@ body {
     .barat-date-card {
         width: min(88%, 320px);
 
-        grid-template-columns:
-            0.78fr
-            1.55fr;
+       grid-template-columns: 1fr 1fr;
 
         margin-top: 30px;
 
@@ -4679,11 +4675,8 @@ body {
     }
 
 
-    .barat-date-centre h3 {
-        font-size: 0.91rem;
-
-        line-height: 1.15;
-
+     .barat-date-centre h3 {
+        font-size: clamp(0.72rem, 3.2vw, 0.91rem);
         white-space: nowrap;
     }
 
@@ -4697,9 +4690,7 @@ body {
    .barat-date-card {
         width: 92%;
 
-        grid-template-columns:
-            0.75fr
-            1.55fr;
+        grid-template-columns: 1fr 1fr;
 
         padding:
             16px 0;
@@ -5124,9 +5115,7 @@ body {
      .barat-date-card {
         width: min(88%, 320px);
 
-        grid-template-columns:
-            0.78fr
-            1.55fr;
+        grid-template-columns: 1fr 1fr;
 
         margin-top: 30px;
 
@@ -5146,8 +5135,9 @@ body {
     }
 
 
-    .barat-date-centre h3 {
-        font-size: 1rem;
+     .barat-date-centre h3 {
+        font-size: clamp(0.72rem, 3.2vw, 0.91rem);
+        white-space: nowrap;
     }
 
 
@@ -10570,4 +10560,74 @@ body {
     .barat-couple-art {
         width: 210px;
     }
+}
+
+/* =========================================================
+   BARAT — BRIDE & GROOM ARTWORK
+   ========================================================= */
+
+.barat-couple-art {
+    position: relative;
+
+    width: min(430px, 82vw);
+
+    margin:
+        55px
+        auto
+        48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+.barat-couple-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .barat-couple-art {
+        width: min(300px, 84vw);
+
+        margin:
+            38px
+            auto
+            34px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .barat-couple-art {
+        width: min(270px, 82vw);
+
+        margin:
+            34px
+            auto
+            30px;
+    }
+
 }
