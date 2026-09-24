@@ -467,10 +467,10 @@ function loadMehndiData() {
         event.date;
 
 
-    document.getElementById(
-        "mehndiTime"
-    ).textContent =
-        event.time;
+    // document.getElementById(
+    //     "mehndiTime"
+    // ).textContent =
+    //     event.time;
 
 
     document.getElementById(

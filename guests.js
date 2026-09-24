@@ -21,22 +21,29 @@ const weddingEvents = {
 }
     },
 
-    mehndi: {
-        title: "Mehndi",
-        symbol: "✦",
-        day: "THURSDAY",
-        date: "07 JANUARY 2027",
-        time: "07:00 PM",
-        venue: "Garden Town Marquee",
-        address: "Garden, Phase 2, Near Phase 2 Park, 2, near Sialkot Bypass, Phase Town, Gujranwala, Pakistan",
-        mapUrl: "https://maps.app.goo.gl/SGmmQkcdhba119cC9",
+   mehndi: {
+    title: "Mehndi",
+    symbol: "✦",
+    day: "THURSDAY",
+    date: "07 JANUARY 2027",
 
-        calendar: {
-    date: "2027-01-07",
-    startTime: "19:00",
-    durationHours: 5
-}
-    },
+    // Overall Mehndi function begins at 5 PM
+    time: "05:00 PM",
+
+    venue: "Garden Town Marquee",
+
+    address:
+        "Garden, Phase 2, Near Phase 2 Park, 2, near Sialkot Bypass, Phase Town, Gujranwala, Pakistan",
+
+    mapUrl:
+        "https://maps.app.goo.gl/SGmmQkcdhba119cC9",
+
+    calendar: {
+        date: "2027-01-07",
+        startTime: "17:00",
+        durationHours: 7
+    }
+},
 
     barat: {
         title: "Barat",
