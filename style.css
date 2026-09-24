@@ -2013,16 +2013,18 @@ body {
 .nikkah-day {
     color: #9c7f55;
 
-    font-size: 0.52rem;
+    font-size: 0.68rem;
+    font-weight: 500;
 
-    letter-spacing:
-        0.28rem;
+    letter-spacing: 0.26rem;
+
+    text-transform: uppercase;
 }
 
 
 .date-content h3 {
     margin:
-        7px 0;
+        9px 0;
 
     color: #3d3127;
 
@@ -2045,15 +2047,20 @@ body {
 
 
 .nikkah-time {
-    color: #887562;
+    margin-top: 4px;
+
+    color: #806b55;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size: 0.95rem;
+    font-size: 1.08rem;
+    font-weight: 500;
 
     font-style: italic;
+
+    letter-spacing: 0.025em;
 }
 
 
