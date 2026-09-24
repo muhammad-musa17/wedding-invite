@@ -51,12 +51,12 @@ body {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 40%,
-            #292117 0%,
-            #19140f 42%,
-            #100d0a 100%
-        );
+    radial-gradient(
+        circle at 50% 40%,
+        #18202b 0%,
+        #0e141c 42%,
+        #070b10 100%
+    );
 }
 
 
@@ -97,7 +97,7 @@ body {
 }
 
 .ambient-one {
-    background: #d3aa64;
+    background: #c4a56a;
 
     top: -250px;
     left: -180px;
@@ -106,7 +106,7 @@ body {
 }
 
 .ambient-two {
-    background: #9f7744;
+    background: #53677f;
 
     right: -250px;
     bottom: -260px;
@@ -928,12 +928,12 @@ body {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 42%,
-            #2a2118 0%,
-            #19140f 50%,
-            #100d0a 100%
-        );
+    radial-gradient(
+        circle at 50% 42%,
+        #18202b 0%,
+        #0e141c 50%,
+        #070b10 100%
+    );
 
     color: var(--ivory);
 }
@@ -6069,12 +6069,12 @@ body {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 38%,
-            #2a2118 0%,
-            #19140f 48%,
-            #100d0a 100%
-        );
+    radial-gradient(
+        circle at 50% 38%,
+        #18202b 0%,
+        #0e141c 48%,
+        #070b10 100%
+    );
 
     color: var(--ivory);
 }
