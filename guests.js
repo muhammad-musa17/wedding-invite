@@ -69,14 +69,15 @@ const weddingEvents = {
         symbol: "◇",
         day: "SATURDAY",
         date: "09 JANUARY 2027",
-        time: "07:00 PM",
+        receptionTime: "06:00 PM",
+        dinnerTime: "08:00 PM",
         venue: "Executive Marquee",
         address: "GT Rd, Ghakhar, Pakistan",
         mapUrl: "https://maps.app.goo.gl/YRNNpYf4BM9Em38Q8",
 
         calendar: {
     date: "2027-01-09",
-    startTime: "19:00",
+    startTime: "18:00",
     durationHours: 4
 }
     }

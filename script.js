@@ -556,13 +556,6 @@ function loadWalimaData() {
     ).textContent =
         event.date;
 
-
-    document.getElementById(
-        "walimaTime"
-    ).textContent =
-        event.time;
-
-
     document.getElementById(
         "walimaVenue"
     ).textContent =

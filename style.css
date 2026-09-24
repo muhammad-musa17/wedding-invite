@@ -10631,3 +10631,112 @@ body {
     }
 
 }
+
+/* =========================================================
+   WALIMA — RECEPTION & DINNER SCHEDULE
+   ========================================================= */
+
+.walima-schedule-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.walima-schedule-times {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 12px;
+}
+
+
+.walima-schedule-item {
+    min-width: 92px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.walima-schedule-item span {
+    color: #9c7741;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.48rem;
+    font-weight: 500;
+
+    letter-spacing: 0.16rem;
+
+    text-transform: uppercase;
+}
+
+
+.walima-schedule-item strong {
+    color: #554535;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.22rem;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.walima-schedule-line {
+    width: 1px;
+    height: 30px;
+
+    background:
+        rgba(143, 116, 69, 0.22);
+}
+
+
+/* =========================================================
+   WALIMA SCHEDULE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .walima-schedule-times {
+        gap: 10px;
+
+        margin-top: 10px;
+    }
+
+
+    .walima-schedule-item {
+        min-width: 70px;
+    }
+
+
+    .walima-schedule-item span {
+        font-size: 0.40rem;
+
+        letter-spacing: 0.10rem;
+    }
+
+
+    .walima-schedule-item strong {
+        font-size: 0.98rem;
+    }
+
+
+    .walima-schedule-line {
+        height: 25px;
+    }
+
+}
