@@ -7711,7 +7711,7 @@ body {
    ========================================================= */
 
 .intro-hosts {
-    margin: 0 auto 16px;
+    margin: 0 auto 22px;
     text-align: center;
 }
 
@@ -7739,7 +7739,7 @@ body {
 }
 
 .intro-together {
-    margin: 2px 0;
+    margin: 5px 0;
 
     color: rgba(245, 239, 228, 0.44);
 
@@ -7756,7 +7756,7 @@ body {
 .intro-formal-copy {
     max-width: 520px;
 
-    margin: 0 auto 13px;
+    margin: 0 auto 19px;
 
     color: rgba(245, 239, 228, 0.48);
 
@@ -7802,7 +7802,7 @@ body {
    ========================================================= */
 
 .intro-couple-formal .intro-with {
-    margin: 10px 0;
+    margin: 16px 0;
 
     color: var(--gold);
 
@@ -7821,7 +7821,7 @@ body {
    ========================================================= */
 
 .bride-family {
-    margin-top: 9px;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -7832,7 +7832,7 @@ body {
 */
 
 .bride-parent-line {
-    margin-top: 9px;
+    margin-top: 12px;
 
     text-align: center;
 
@@ -7886,7 +7886,7 @@ body {
 
 .intro-couple-formal + .open-invitation,
 .intro-hosts ~ .open-invitation {
-    margin-top: 22px;
+    margin-top: 27px;
 }
 
 
@@ -7940,7 +7940,7 @@ body {
     /* Family hosts */
 
     .intro-hosts {
-        margin-bottom: 11px;
+        margin-bottom: 16px;
     }
 
     .intro-grandparents,
@@ -7951,7 +7951,7 @@ body {
     }
 
     .intro-together {
-        margin: 1px 0;
+        margin: 4px 0;
 
         font-size: 0.72rem;
     }
@@ -7962,11 +7962,11 @@ body {
     .intro-formal-copy {
         max-width: 305px;
 
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         font-size: 0.78rem;
 
-        line-height: 1.35;
+        line-height: 1.4;
     }
 
 
@@ -7987,7 +7987,7 @@ body {
     /* WITH */
 
     .intro-couple-formal .intro-with {
-        margin: 8px 0;
+        margin: 12px 0;
 
         font-size: 0.88rem;
     }
@@ -7998,10 +7998,7 @@ body {
     .bride-family {
         max-width: 290px;
 
-        margin:
-            7px
-            auto
-            0;
+        margin:0 auto;
 
         line-height: 1.3;
     }
@@ -8010,7 +8007,7 @@ body {
         max-width: 290px;
 
         margin:
-            7px
+            9px
             auto
             0;
 
@@ -8031,7 +8028,7 @@ body {
     /* Open invitation button */
 
     .open-invitation {
-        margin-top: 18px;
+        margin-top: 23px;
         margin-bottom: 5px;
     }
 }
@@ -8087,4 +8084,4 @@ body {
     .bride-parents {
         font-size: 0.75rem !important;
     }
-}
+}  
