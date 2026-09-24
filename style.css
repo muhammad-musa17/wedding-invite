@@ -8121,3 +8121,508 @@ body {
         font-size: 0.75rem !important;
     }
 }  
+
+/* =========================================================
+   SECTION 3 — FINAL MOBILE LAYOUT
+   Personalized Guest Invitation
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* -----------------------------------------------------
+       SECTION
+       ----------------------------------------------------- */
+
+    .guest-invitation {
+        min-height: 100svh;
+
+        padding:
+            52px
+            16px
+            42px;
+    }
+
+    .guest-content {
+        width: min(100%, 360px);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       TOP EYEBROW
+       ----------------------------------------------------- */
+
+    .guest-eyebrow {
+        max-width: 310px;
+
+        margin:
+            0
+            auto
+            18px;
+
+        font-size: 0.47rem;
+
+        letter-spacing: 0.19rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------------------
+       SMALL ORNAMENT
+       ----------------------------------------------------- */
+
+    .guest-ornament {
+        margin:
+            0
+            auto
+            18px;
+    }
+
+
+    /* -----------------------------------------------------
+       "DEAR"
+       ----------------------------------------------------- */
+
+    .guest-prefix {
+        margin:
+            0
+            0
+            5px;
+
+        font-size: 0.92rem;
+
+        line-height: 1.2;
+    }
+
+
+    /* -----------------------------------------------------
+       GUEST NAME
+       ----------------------------------------------------- */
+
+    .guest-name-wrapper {
+        margin-bottom: 19px;
+    }
+
+    .guest-name-wrapper h2 {
+        max-width: 340px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: clamp(
+            2.25rem,
+            11.5vw,
+            3.15rem
+        );
+
+        line-height: 0.94;
+
+        letter-spacing: -0.015em;
+    }
+
+
+    /* -----------------------------------------------------
+       INVITATION MESSAGE
+       ----------------------------------------------------- */
+
+    .guest-message {
+        max-width: 285px;
+
+        margin:
+            0
+            auto
+            25px;
+
+        font-size: 0.84rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------------------
+       EVENTS AREA
+       ----------------------------------------------------- */
+
+    .guest-events-wrapper {
+        margin-top: 0;
+    }
+
+    .events-label {
+        margin-bottom: 14px;
+
+        font-size: 0.46rem;
+
+        letter-spacing: 0.18rem;
+
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       DEFAULT EVENT GRID
+
+       Default = 2 columns.
+       Therefore 4 events automatically become 2 × 2.
+       ----------------------------------------------------- */
+
+    .guest-events {
+        width: 100%;
+        max-width: 270px;
+
+        margin:
+            0
+            auto;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       EVENT CARD
+       ----------------------------------------------------- */
+
+    .guest-event {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 84px;
+
+        padding:
+            11px
+            6px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Event symbol */
+
+    .guest-event-symbol {
+        margin-bottom: 5px;
+
+        line-height: 1;
+    }
+
+
+    /* Event name */
+
+    .guest-event-name {
+        font-size: 0.98rem;
+
+        line-height: 1.1;
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       BARAT — 2 PERSONS ONLY
+       ----------------------------------------------------- */
+
+    .guest-event-limit {
+        display: block;
+
+        margin-top: 6px;
+
+        font-size: 0.34rem;
+
+        line-height: 1;
+
+        letter-spacing: 0.055rem;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       1 EVENT
+       Centre the single event card
+       ===================================================== */
+
+    .guest-events:has(
+        .guest-event:first-child:last-child
+    ) {
+        grid-template-columns: 1fr;
+
+        max-width: 132px;
+    }
+
+
+    /* =====================================================
+       2 EVENTS
+       Two cards side-by-side
+       ===================================================== */
+
+    .guest-events:has(
+        .guest-event:nth-child(2):last-child
+    ) {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 270px;
+    }
+
+
+    /* =====================================================
+       3 EVENTS
+       THREE CARDS IN ONE ROW
+
+       Example:
+       Nikkah | Barat | Walima
+       ===================================================== */
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    ) {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        max-width: 310px;
+
+        gap: 7px;
+    }
+
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event {
+        min-height: 84px;
+
+        padding:
+            10px
+            4px;
+    }
+
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event-name {
+        font-size: 0.92rem;
+    }
+
+
+    /* Keep Barat restriction readable
+       even inside narrower 3-column card */
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event-limit {
+        margin-top: 6px;
+
+        font-size: 0.31rem;
+
+        letter-spacing: 0.04rem;
+    }
+
+
+    /* =====================================================
+       4 EVENTS
+       Clean 2 × 2 grid
+       ===================================================== */
+
+    .guest-events:has(
+        .guest-event:nth-child(4):last-child
+    ) {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 270px;
+
+        gap: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       DISCOVER BUTTON
+       ----------------------------------------------------- */
+
+    .continue-invitation {
+        margin-top: 24px;
+
+        padding:
+            13px
+            15px;
+
+        font-size: 0.50rem;
+
+        letter-spacing: 0.105rem;
+
+        line-height: 1.2;
+    }
+
+
+    /* -----------------------------------------------------
+       INVITATION CODE
+       ----------------------------------------------------- */
+
+    .invitation-code {
+        margin-top: 11px;
+
+        font-size: 0.39rem;
+
+        letter-spacing: 0.12rem;
+
+        line-height: 1.3;
+    }
+}
+
+
+/* =========================================================
+   SECTION 3 — VERY SMALL PHONES
+   iPhone SE / narrow Android devices etc.
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .guest-invitation {
+        padding:
+            46px
+            14px
+            36px;
+    }
+
+
+    /* Heading */
+
+    .guest-eyebrow {
+        max-width: 280px;
+
+        margin-bottom: 16px;
+
+        font-size: 0.43rem;
+
+        letter-spacing: 0.16rem;
+    }
+
+
+    .guest-ornament {
+        margin-bottom: 16px;
+    }
+
+
+    /* Guest name */
+
+    .guest-name-wrapper {
+        margin-bottom: 17px;
+    }
+
+    .guest-name-wrapper h2 {
+        max-width: 310px;
+
+        font-size: clamp(
+            2.05rem,
+            11vw,
+            2.7rem
+        );
+
+        line-height: 0.95;
+    }
+
+
+    /* Message */
+
+    .guest-message {
+        max-width: 265px;
+
+        margin-bottom: 23px;
+
+        font-size: 0.79rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* Events */
+
+    .events-label {
+        margin-bottom: 13px;
+
+        font-size: 0.43rem;
+
+        letter-spacing: 0.16rem;
+    }
+
+
+    /* 3-event layout remains one row */
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    ) {
+        max-width: 292px;
+
+        gap: 6px;
+    }
+
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event {
+        min-height: 80px;
+
+        padding:
+            9px
+            3px;
+    }
+
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event-name {
+        font-size: 0.86rem;
+    }
+
+
+    .guest-events:has(
+        .guest-event:nth-child(3):last-child
+    )
+    .guest-event-limit {
+        font-size: 0.28rem;
+
+        letter-spacing: 0.025rem;
+    }
+
+
+    /* Button */
+
+    .continue-invitation {
+        margin-top: 22px;
+
+        padding:
+            12px
+            13px;
+
+        font-size: 0.47rem;
+
+        letter-spacing: 0.09rem;
+    }
+
+
+    /* Invitation code */
+
+    .invitation-code {
+        margin-top: 10px;
+
+        font-size: 0.36rem;
+    }
+}
