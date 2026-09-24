@@ -70,7 +70,7 @@ body {
 
     pointer-events: none;
 
-    opacity: 0.055;
+    opacity: 0.01;
 
     background-image:
         url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
@@ -96,7 +96,7 @@ body {
     pointer-events: none;
 }
 
-.ambient-one {
+/* .ambient-one {
     background: #c4a56a;
 
     top: -250px;
@@ -112,7 +112,7 @@ body {
     bottom: -260px;
 
     animation: ambientMove 15s ease-in-out infinite alternate-reverse;
-}
+} */
 
 @keyframes ambientMove {
     from {
