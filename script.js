@@ -3035,31 +3035,31 @@ async function initialiseWeddingInvitation() {
    REMOVE BEFORE PUSHING TO GITHUB
 ========================================================= */
 
-if (
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1"
-) {
+// if (
+//     window.location.hostname === "localhost" ||
+//     window.location.hostname === "127.0.0.1"
+// ) {
 
-    currentGuest = {
-        name: "Local Test Guest",
-        events: [
-            "nikkah",
-            "mehndi",
-            "barat",
-            "walima"
-        ]
-    };
+//     currentGuest = {
+//         name: "Local Test Guest",
+//         events: [
+//             "nikkah",
+//             "mehndi",
+//             "barat",
+//             "walima"
+//         ]
+//     };
 
-    loadNikkahData();
-    loadMehndiData();
-    loadBaratData();
-    loadWalimaData();
+//     loadNikkahData();
+//     loadMehndiData();
+//     loadBaratData();
+//     loadWalimaData();
 
-    loadGuestInvitation();
-    applyEventPermissions();
+//     loadGuestInvitation();
+//     applyEventPermissions();
 
-    return;
-}
+//     return;
+// }
     /*
        No invitation code at all.
     */
