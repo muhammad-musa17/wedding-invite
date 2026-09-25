@@ -11030,3 +11030,1102 @@ body {
     }
 
 }
+
+/* =========================================================
+   LANGUAGE TOGGLE
+========================================================= */
+
+.language-toggle {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 9px 14px;
+
+    border: 1px solid rgba(196, 165, 106, 0.34);
+    border-radius: 999px;
+
+    background: rgba(7, 11, 16, 0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.language-option {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: rgba(245, 239, 228, 0.48);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+
+    letter-spacing: 0.12rem;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.language-option[data-language="ur"] {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0;
+}
+
+
+.language-option:hover {
+    color: var(--gold-light);
+}
+
+
+.language-option.active {
+    color: var(--gold-light);
+}
+
+
+.language-separator {
+    width: 1px;
+    height: 13px;
+
+    background: rgba(196, 165, 106, 0.32);
+}
+
+
+/* Urdu typography */
+
+html[lang="ur"] {
+    direction: rtl;
+}
+
+
+html[lang="ur"] body {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+}
+
+
+/*
+   Individual invitation sections remain structurally
+   centred. We do not globally right-align the design.
+*/
+html[lang="ur"] .intro,
+html[lang="ur"] .invitation,
+html[lang="ur"] .guest-invitation,
+html[lang="ur"] .event-experience {
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .language-toggle {
+        top: 14px;
+        right: 14px;
+
+        padding: 7px 11px;
+
+        gap: 8px;
+    }
+
+    .language-option {
+        font-size: 0.55rem;
+    }
+
+    .language-option[data-language="ur"] {
+        font-size: 0.82rem;
+    }
+}
+
+/* =========================================================
+   URDU — MAIN INVITATION
+========================================================= */
+
+html[lang="ur"] .invitation .section-eyebrow {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .invitation .verse-translation {
+    font-family: "Noto Naskh Arabic", serif;
+
+    direction: rtl;
+
+    font-size: 1.05rem;
+    line-height: 2;
+
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+html[lang="ur"] .invitation .verse-reference {
+    font-family: "Noto Naskh Arabic", serif;
+
+    direction: rtl;
+
+    letter-spacing: 0;
+    font-size: 0.9rem;
+}
+
+
+html[lang="ur"] .invitation .coming-next > p {
+    font-family: "Noto Naskh Arabic", serif;
+
+    direction: rtl;
+
+    letter-spacing: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .invitation .coming-next h2 {
+    font-family: "Noto Naskh Arabic", serif;
+
+    direction: rtl;
+
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+
+/* Keep couple names in their original English styling */
+
+html[lang="ur"] .invitation .main-names {
+    direction: ltr;
+}
+
+
+html[lang="ur"] .invitation .main-names p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .invitation .verse-translation {
+        font-size: 0.98rem;
+        line-height: 1.95;
+    }
+
+
+    html[lang="ur"] .invitation .coming-next h2 {
+        font-size: 1.45rem;
+    }
+
+}
+
+/* =========================================================
+   URDU — PERSONALISED GUEST INVITATION
+========================================================= */
+
+html[lang="ur"] .guest-eyebrow,
+html[lang="ur"] .guest-prefix,
+html[lang="ur"] .guest-message,
+html[lang="ur"] .events-label,
+html[lang="ur"] .continue-invitation,
+html[lang="ur"] .invitation-code {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+html[lang="ur"] .guest-eyebrow {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .guest-prefix {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .guest-message {
+    direction: rtl;
+
+    font-size: 1.05rem;
+    line-height: 2;
+
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+html[lang="ur"] .events-label {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* Dynamic event cards */
+
+html[lang="ur"] .guest-event-name,
+html[lang="ur"] .guest-event-limit {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+html[lang="ur"] .guest-event-name {
+    font-size: 1.05rem;
+}
+
+
+html[lang="ur"] .guest-event-limit {
+    font-size: 0.78rem;
+}
+
+
+/*
+   Guest name comes directly from Supabase.
+   Keep it in its original styling/direction.
+*/
+
+html[lang="ur"] #guestName {
+    direction: ltr;
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+html[lang="ur"] .continue-invitation {
+    direction: rtl;
+    font-size: 0.95rem;
+}
+
+
+html[lang="ur"] .invitation-code {
+    direction: ltr;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .guest-message {
+        font-size: 0.98rem;
+        line-height: 1.9;
+    }
+
+    html[lang="ur"] .guest-event-name {
+        font-size: 1rem;
+    }
+
+}
+
+/* =========================================================
+   URDU — NIKKAH
+========================================================= */
+
+html[lang="ur"] .nikkah-kicker,
+html[lang="ur"] .nikkah-small-title,
+html[lang="ur"] .nikkah-title-wrap h2,
+html[lang="ur"] .nikkah-subtitle,
+html[lang="ur"] .nikkah-invitation-copy,
+html[lang="ur"] .nikkah-day,
+html[lang="ur"] .nikkah-date h3,
+html[lang="ur"] .nikkah-time,
+html[lang="ur"] .nikkah-venue .venue-label,
+html[lang="ur"] .nikkah-actions,
+html[lang="ur"] .nikkah-dua p {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+html[lang="ur"] .nikkah-kicker {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .nikkah-small-title {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+html[lang="ur"] .nikkah-title-wrap h2 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1.25;
+}
+
+
+html[lang="ur"] .nikkah-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .nikkah-invitation-copy {
+    direction: rtl;
+
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.08rem;
+    line-height: 2;
+}
+
+
+/* Keep couple names in English */
+
+html[lang="ur"] .nikkah-couple {
+    direction: ltr;
+}
+
+html[lang="ur"] .nikkah-couple p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* Date and time */
+
+html[lang="ur"] .nikkah-day {
+    font-size: 0.95rem;
+}
+
+html[lang="ur"] #nikkahDate {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+html[lang="ur"] .nikkah-time {
+    direction: rtl;
+    font-size: 0.95rem;
+}
+
+
+/*
+   Venue name + official address stay as supplied
+   rather than being translated.
+*/
+
+html[lang="ur"] #nikkahVenue,
+html[lang="ur"] #nikkahAddress {
+    direction: ltr;
+}
+
+
+/* Buttons */
+
+html[lang="ur"] .nikkah-action {
+    direction: rtl;
+}
+
+html[lang="ur"] .nikkah-action > span:last-child {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+/* Dua */
+
+html[lang="ur"] .nikkah-dua p {
+    direction: rtl;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .nikkah-title-wrap h2 {
+        font-size: 3.2rem;
+    }
+
+    html[lang="ur"] .nikkah-invitation-copy {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    html[lang="ur"] .nikkah-dua p {
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================================================
+   URDU — MEHNDI
+========================================================= */
+
+html[lang="ur"] .mehndi-kicker,
+html[lang="ur"] .mehndi-title-wrap > p,
+html[lang="ur"] .mehndi-title-wrap > h2,
+html[lang="ur"] .mehndi-title-wrap > span,
+html[lang="ur"] .mehndi-copy,
+html[lang="ur"] .mehndi-date-text,
+html[lang="ur"] .mehndi-journey-heading p,
+html[lang="ur"] .mehndi-stop-copy > p,
+html[lang="ur"] .mehndi-stop-note,
+html[lang="ur"] .mehndi-venue > p,
+html[lang="ur"] .mehndi-actions,
+html[lang="ur"] .mehndi-closing p {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+/* Intro */
+
+html[lang="ur"] .mehndi-kicker {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+html[lang="ur"] .mehndi-title-wrap > p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+html[lang="ur"] .mehndi-title-wrap > h2 {
+    line-height: 1.25;
+}
+
+html[lang="ur"] .mehndi-title-wrap > span {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+html[lang="ur"] .mehndi-copy {
+    direction: rtl;
+
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+
+/* Couple names remain English */
+
+html[lang="ur"] .mehndi-couple {
+    direction: ltr;
+}
+
+html[lang="ur"] .mehndi-couple p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* Date */
+
+html[lang="ur"] .mehndi-date-text {
+    direction: rtl;
+}
+
+html[lang="ur"] #mehndiDay,
+html[lang="ur"] #mehndiDate {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+/* Journey */
+
+html[lang="ur"] .mehndi-journey-heading p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+html[lang="ur"] .mehndi-stop-copy {
+    direction: rtl;
+}
+
+html[lang="ur"] .mehndi-stop-copy > p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+html[lang="ur"] .mehndi-stop-note {
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+
+/*
+   Keep programme numbers and times LTR so they
+   don't visually reverse in an RTL document.
+*/
+
+html[lang="ur"] .mehndi-stop-number,
+html[lang="ur"] .mehndi-stop-copy h4 {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+
+/* Official venue details remain unchanged */
+
+html[lang="ur"] #mehndiVenue,
+html[lang="ur"] #mehndiAddress {
+    direction: ltr;
+}
+
+
+/* Actions */
+
+html[lang="ur"] .mehndi-action {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+/* Closing */
+
+html[lang="ur"] .mehndi-closing p {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .mehndi-copy {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    html[lang="ur"] .mehndi-stop-copy > p {
+        font-size: 1rem;
+    }
+
+    html[lang="ur"] .mehndi-stop-note {
+        font-size: 0.82rem;
+    }
+
+}
+
+/* =========================================================
+   URDU — BARAT
+========================================================= */
+
+html[lang="ur"] .barat-kicker,
+html[lang="ur"] .barat-title > p,
+html[lang="ur"] .barat-title > h2,
+html[lang="ur"] .barat-title > span,
+html[lang="ur"] .barat-copy,
+html[lang="ur"] #baratDay,
+html[lang="ur"] #baratDate,
+html[lang="ur"] .barat-notice-content,
+html[lang="ur"] .barat-programme-heading p,
+html[lang="ur"] .barat-programme-item h4,
+html[lang="ur"] .barat-programme-note,
+html[lang="ur"] .barat-venue-label,
+html[lang="ur"] .barat-button,
+html[lang="ur"] .barat-closing p {
+    font-family: "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
+}
+
+
+/* Intro */
+
+html[lang="ur"] .barat-kicker {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .barat-title > p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+html[lang="ur"] .barat-title > h2 {
+    line-height: 1.25;
+}
+
+
+html[lang="ur"] .barat-title > span {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .barat-copy {
+    direction: rtl;
+
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+
+/* Keep couple names English */
+
+html[lang="ur"] .barat-couple {
+    direction: ltr;
+}
+
+html[lang="ur"] .barat-couple p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* Date */
+
+html[lang="ur"] #baratDay,
+html[lang="ur"] #baratDate {
+    direction: rtl;
+}
+
+
+/* Attendance notice */
+
+html[lang="ur"] .barat-notice-small {
+    font-family: "Noto Naskh Arabic", serif;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+html[lang="ur"] .barat-notice-content strong {
+    font-family: "Noto Naskh Arabic", serif;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* Programme */
+
+html[lang="ur"] .barat-programme-heading p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .barat-programme-item h4 {
+    direction: rtl;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+html[lang="ur"] .barat-programme-note {
+    direction: rtl;
+
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+
+/*
+   Keep programme numbers and times LTR.
+*/
+
+html[lang="ur"] .barat-programme-number,
+html[lang="ur"] .barat-programme-time {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+
+/* Official venue remains unchanged */
+
+html[lang="ur"] #baratVenue,
+html[lang="ur"] #baratAddress {
+    direction: ltr;
+}
+
+
+/* Buttons */
+
+html[lang="ur"] .barat-button {
+    letter-spacing: 0;
+}
+
+
+/* Closing */
+
+html[lang="ur"] .barat-closing p {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .barat-copy {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    html[lang="ur"] .barat-programme-item h4 {
+        font-size: 1rem;
+    }
+
+    html[lang="ur"] .barat-programme-note {
+        font-size: 0.82rem;
+    }
+
+}
+
+/* =========================================================
+   URDU — WALIMA
+========================================================= */
+
+html[lang="ur"] .walima-eyebrow,
+html[lang="ur"] .walima-heading > p,
+html[lang="ur"] .walima-heading > h2,
+html[lang="ur"] .walima-heading > span,
+html[lang="ur"] .walima-copy,
+html[lang="ur"] .walima-detail-label,
+html[lang="ur"] #walimaDate,
+html[lang="ur"] #walimaDay,
+html[lang="ur"] .walima-schedule-item span,
+html[lang="ur"] .walima-venue-label,
+html[lang="ur"] .walima-button,
+html[lang="ur"] .walima-message p {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+    letter-spacing: 0;
+}
+
+
+/* Eyebrow */
+
+html[lang="ur"] .walima-eyebrow {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* Main heading */
+
+html[lang="ur"] .walima-heading > p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+html[lang="ur"] .walima-heading > h2 {
+    line-height: 1.25;
+}
+
+
+html[lang="ur"] .walima-heading > span {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* Invitation copy */
+
+html[lang="ur"] .walima-copy {
+    direction: rtl;
+
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+
+/* Keep couple names English */
+
+html[lang="ur"] .walima-couple {
+    direction: ltr;
+}
+
+
+html[lang="ur"] .walima-couple p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+}
+
+
+/* Date */
+
+html[lang="ur"] .walima-date-detail {
+    direction: rtl;
+}
+
+
+html[lang="ur"] #walimaDate,
+html[lang="ur"] #walimaDay {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+    letter-spacing: 0;
+}
+
+
+/* Schedule */
+
+html[lang="ur"] .walima-schedule-detail {
+    direction: rtl;
+}
+
+
+html[lang="ur"] .walima-schedule-item span {
+    line-height: 1.7;
+}
+
+
+/*
+   Keep 6:00 PM and 8:00 PM visually LTR.
+*/
+
+html[lang="ur"] .walima-schedule-item strong {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+
+/* Official venue information remains English */
+
+html[lang="ur"] #walimaVenue,
+html[lang="ur"] #walimaAddress {
+    direction: ltr;
+}
+
+
+/* Buttons */
+
+html[lang="ur"] .walima-button {
+    letter-spacing: 0;
+}
+
+
+/* Closing */
+
+html[lang="ur"] .walima-message p {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .walima-copy {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+
+    html[lang="ur"] .walima-heading > h2 {
+        line-height: 1.3;
+    }
+
+
+    html[lang="ur"] .walima-message p {
+        font-size: 0.95rem;
+    }
+
+}
+
+/* =========================================================
+   URDU — FAMILY / CLOSING
+========================================================= */
+
+html[lang="ur"] .family-eyebrow,
+html[lang="ur"] .family-heading > p,
+html[lang="ur"] .family-heading > h2,
+html[lang="ur"] .family-heading > span,
+html[lang="ur"] .family-list h3,
+html[lang="ur"] .family-contact > p,
+html[lang="ur"] .family-closing > p {
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+    letter-spacing: 0;
+}
+
+
+/* Top eyebrow */
+
+html[lang="ur"] .family-eyebrow {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* Heading */
+
+html[lang="ur"] .family-heading {
+    direction: rtl;
+}
+
+
+html[lang="ur"] .family-heading > p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+html[lang="ur"] .family-heading > h2 {
+    line-height: 1.3;
+}
+
+
+html[lang="ur"] .family-heading > span {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* Column headings */
+
+html[lang="ur"] .family-list h3 {
+    direction: rtl;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/*
+   Keep actual family member names
+   in their original English styling.
+*/
+
+html[lang="ur"] .family-list p {
+    direction: ltr;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+}
+
+
+/*
+   The final item in Looking Forward
+   is translated Urdu rather than a proper name.
+*/
+
+html[lang="ur"] .family-list:last-child p:last-child {
+    direction: rtl;
+
+    font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+    line-height: 1.8;
+}
+
+
+/* Contact */
+
+html[lang="ur"] .family-contact > p {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* Keep phone numbers LTR */
+
+html[lang="ur"] .family-contact-numbers {
+    direction: ltr;
+}
+
+
+/* Keep couple names English */
+
+html[lang="ur"] .family-closing > h3 {
+    direction: ltr;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+}
+
+
+/* Closing Urdu message */
+
+html[lang="ur"] .family-closing > p {
+    direction: rtl;
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* Keep monogram unchanged */
+
+html[lang="ur"] .family-closing > small {
+    direction: ltr;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    html[lang="ur"] .family-heading > h2 {
+        line-height: 1.35;
+    }
+
+
+    html[lang="ur"] .family-closing > p {
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+
+}
