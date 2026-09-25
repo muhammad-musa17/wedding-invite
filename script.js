@@ -152,9 +152,6 @@ addCalendar:
     "Add to Calendar",
 
 nikkahDua:
-    "May Allah bless this union with love, mercy and barakah."
-    },
-    nikkahDua:
     "May Allah bless this union with love, mercy and barakah.",
 
 /* Mehndi */
@@ -363,6 +360,7 @@ familyContact:
 
 familyClosing:
     "With love, we look forward to celebrating with you.",
+},
 
 
     ur: {
@@ -701,7 +699,8 @@ familyClosing:
     "ہم محبت اور خوشی کے ساتھ آپ کے ساتھ اس خوبصورت جشن کے منتظر ہیں۔"
 
     }
-}
+};
+
 
 function applyLanguage(language) {
 
