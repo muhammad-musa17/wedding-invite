@@ -376,7 +376,7 @@ async function loadGuests() {
         await supabaseClient
             .from("guests")
             .select(
-                "id, created_at, invite_code, guest_name, nikkah, mehndi, barat, walima"
+                "id, created_at, invite_code, guest_name, nikkah, mehndi, barat, walima, barat_invitation_type, walima_invitation_type"
             )
             .order(
                 "created_at",
@@ -816,6 +816,11 @@ function openAddGuest() {
     eventBarat.checked = false;
     eventWalima.checked = false;
 
+    baratInvitationType.value = "two_persons";
+walimaInvitationType.value = "general";
+
+updateInvitationTypeVisibility();
+
 
     codePreview.textContent =
         editingInviteCode;
@@ -874,6 +879,14 @@ function openEditGuest(guest) {
 
     eventWalima.checked =
         guest.walima;
+
+    baratInvitationType.value =
+    guest.barat_invitation_type || "two_persons";
+
+walimaInvitationType.value =
+    guest.walima_invitation_type || "general";
+
+updateInvitationTypeVisibility();
 
 
     codePreview.textContent =
@@ -980,22 +993,28 @@ guestForm.addEventListener(
 
         const guestData = {
 
-            guest_name:
-                guestName,
+    guest_name:
+        guestName,
 
-            nikkah:
-                eventNikkah.checked,
+    nikkah:
+        eventNikkah.checked,
 
-            mehndi:
-                eventMehndi.checked,
+    mehndi:
+        eventMehndi.checked,
 
-            barat:
-                eventBarat.checked,
+    barat:
+        eventBarat.checked,
 
-            walima:
-                eventWalima.checked
+    walima:
+        eventWalima.checked,
 
-        };
+    barat_invitation_type:
+        baratInvitationType.value,
+
+    walima_invitation_type:
+        walimaInvitationType.value
+
+};
 
 
         saveGuestButton.disabled = true;
