@@ -1658,10 +1658,23 @@ async function getGuestFromSupabase() {
     }
 
 
-    return {
-        name: guest.guest_name,
-        events: allowedEvents
-    };
+    const invitationData = {
+    name: guest.guest_name,
+    events: allowedEvents,
+
+    baratInvitationType:
+        guest.barat_invitation_type || "two_persons",
+
+    walimaInvitationType:
+        guest.walima_invitation_type || "general"
+};
+
+console.log(
+    "Wedding invitation data:",
+    invitationData
+);
+
+return invitationData;
 
 }
 
