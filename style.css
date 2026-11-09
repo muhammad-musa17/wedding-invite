@@ -12129,3 +12129,85 @@ html[lang="ur"] .family-closing > small {
     }
 
 }
+
+
+/* =========================================================
+   BARAT & WALIMA — CONDITIONAL ATTENDANCE NOTICES
+   ========================================================= */
+
+/* Always hide attendance notices when not applicable */
+.barat-attendance-notice[hidden],
+.walima-attendance-notice[hidden] {
+    display: none !important;
+}
+
+/* Walima two-person invitation notice */
+.walima-attendance-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: calc(100% - 32px);
+    margin: 24px auto 30px;
+    padding: 17px 30px;
+
+    text-align: center;
+
+    border: 1px solid rgba(177, 145, 84, 0.38);
+    border-radius: 3px;
+
+    background: rgba(255, 250, 239, 0.45);
+    box-shadow: 0 8px 28px rgba(83, 61, 34, 0.06);
+}
+
+.walima-attendance-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #9b7a45;
+    font-family: inherit;
+    font-size: 0.61rem;
+    font-weight: 500;
+    letter-spacing: 0.19em;
+    line-height: 1.5;
+}
+
+.walima-attendance-notice strong {
+    display: block;
+
+    color: #76572f;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+}
+
+/* Urdu typography */
+html[lang="ur"] .walima-attendance-label,
+html[lang="ur"] .walima-attendance-notice strong {
+    letter-spacing: normal;
+    line-height: 1.9;
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .walima-attendance-notice {
+        max-width: calc(100% - 36px);
+        margin: 20px auto 25px;
+        padding: 14px 22px;
+    }
+
+    .walima-attendance-label {
+        font-size: 0.55rem;
+        letter-spacing: 0.13em;
+    }
+
+    .walima-attendance-notice strong {
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+    }
+}

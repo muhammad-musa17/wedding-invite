@@ -1477,6 +1477,8 @@ if (
     renderGuestEvents(
         currentGuest.events
     );
+
+    updateAttendanceNotices();
 }
 
 
@@ -1658,23 +1660,20 @@ async function getGuestFromSupabase() {
     }
 
 
-    const invitationData = {
+    return {
     name: guest.guest_name,
     events: allowedEvents,
 
     baratInvitationType:
-        guest.barat_invitation_type || "two_persons",
+        guest.barat_invitation_type === "general"
+            ? "general"
+            : "two_persons",
 
     walimaInvitationType:
-        guest.walima_invitation_type || "general"
+        guest.walima_invitation_type === "two_persons"
+            ? "two_persons"
+            : "general"
 };
-
-console.log(
-    "Wedding invitation data:",
-    invitationData
-);
-
-return invitationData;
 
 }
 
@@ -1754,8 +1753,94 @@ invitationCode.textContent =
         currentGuest.events
     );
 
+    updateAttendanceNotices();
+
 }
 
+/* =========================================================
+   CONDITIONAL BARAT & WALIMA INVITATIONS
+========================================================= */
+
+function isTwoPersonInvitation(eventKey) {
+
+    if (
+        !currentGuest ||
+        !currentGuest.events?.includes(eventKey)
+    ) {
+        return false;
+    }
+
+    if (eventKey === "barat") {
+        return currentGuest.baratInvitationType !== "general";
+    }
+
+    if (eventKey === "walima") {
+        return currentGuest.walimaInvitationType === "two_persons";
+    }
+
+    return false;
+}
+
+
+function updateAttendanceNotices() {
+
+    const baratNotice =
+        document.querySelector(".barat-attendance-notice");
+
+    if (baratNotice) {
+        baratNotice.hidden = !isTwoPersonInvitation("barat");
+        baratNotice.style.display =
+            baratNotice.hidden ? "none" : "";
+    }
+
+    const walimaHeading =
+        document.querySelector(".walima-heading");
+
+    if (walimaHeading) {
+
+        let walimaNotice =
+            document.getElementById("walimaAttendanceNotice");
+
+        if (!walimaNotice) {
+
+            walimaNotice = document.createElement("div");
+
+            walimaNotice.id = "walimaAttendanceNotice";
+            walimaNotice.className = "walima-attendance-notice";
+
+            walimaNotice.innerHTML = `
+                <span class="walima-attendance-label"></span>
+                <strong></strong>
+            `;
+
+            walimaHeading.insertAdjacentElement(
+                "afterend",
+                walimaNotice
+            );
+        }
+
+        const text =
+            translations[currentLanguage] || translations.en;
+
+        walimaNotice.querySelector(
+            ".walima-attendance-label"
+        ).textContent =
+            currentLanguage === "ur"
+                ? "دعوتِ ولیمہ"
+                : "WALIMA INVITATION";
+
+        walimaNotice.querySelector(
+            "strong"
+        ).textContent =
+            text.baratPersons;
+
+        walimaNotice.hidden =
+            !isTwoPersonInvitation("walima");
+
+        walimaNotice.style.display =
+            walimaNotice.hidden ? "none" : "";
+    }
+}
 
 /* =========================================================
    RENDER EVENT CARDS
@@ -1775,52 +1860,49 @@ function renderGuestEvents(events) {
         }
 
         const languageText =
-    translations[currentLanguage] ||
-    translations.en;
+            translations[currentLanguage] ||
+            translations.en;
 
-
-const eventDisplayName =
-    languageText.eventNames?.[eventKey] ||
-    event.title;
+        const eventDisplayName =
+            languageText.eventNames?.[eventKey] ||
+            event.title;
 
         const eventElement =
             document.createElement("div");
 
-        eventElement.className =
-            "guest-event";
+        eventElement.className = "guest-event";
 
-            if (eventKey === "barat") {
-    eventElement.classList.add("guest-event-restricted");
-}
+        const restricted =
+            isTwoPersonInvitation(eventKey);
 
+        if (restricted) {
+            eventElement.classList.add(
+                "guest-event-restricted"
+            );
+        }
 
         eventElement.innerHTML = `
-    <span class="guest-event-symbol">
-        ${event.symbol || "✦"}
-    </span>
+            <span class="guest-event-symbol">
+                ${event.symbol || "✦"}
+            </span>
 
-    <span class="guest-event-name">
-    ${eventDisplayName}
-</span>
+            <span class="guest-event-name">
+                ${eventDisplayName}
+            </span>
 
-    ${
-        eventKey === "barat"
-            ? `
-                <span class="guest-event-limit">
-    ${languageText.baratLimit}
-</span>
-              `
-            : ""
-    }
-`;
+            ${
+                restricted
+                    ? `
+                        <span class="guest-event-limit">
+                            ${languageText.baratPersons}
+                        </span>
+                    `
+                    : ""
+            }
+        `;
 
-
-        guestEvents.appendChild(
-            eventElement
-        );
-
+        guestEvents.appendChild(eventElement);
     });
-
 }
 
 
@@ -3128,6 +3210,8 @@ async function initialiseWeddingInvitation() {
     loadGuestInvitation();
 
     applyEventPermissions();
+
+    updateAttendanceNotices();
 
 }
 
