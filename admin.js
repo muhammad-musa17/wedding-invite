@@ -151,25 +151,41 @@ const toast =
    INVITATION TYPE VISIBILITY
 ========================================================= */
 
+/* =========================================================
+   INVITATION TYPE VISIBILITY
+========================================================= */
+
 function updateInvitationTypeVisibility() {
 
-    baratTypeGroup.hidden =
-        !eventBarat.checked;
+    const baratGroup =
+        document.getElementById("baratTypeGroup");
 
-    walimaTypeGroup.hidden =
-        !eventWalima.checked;
+    const walimaGroup =
+        document.getElementById("walimaTypeGroup");
 
+    const baratCheckbox =
+        document.getElementById("eventBarat");
+
+    const walimaCheckbox =
+        document.getElementById("eventWalima");
+
+    if (!baratGroup || !walimaGroup ||
+        !baratCheckbox || !walimaCheckbox) {
+        return;
+    }
+
+    baratGroup.hidden = !baratCheckbox.checked;
+    walimaGroup.hidden = !walimaCheckbox.checked;
 }
 
-eventBarat.addEventListener(
-    "change",
-    updateInvitationTypeVisibility
-);
 
-eventWalima.addEventListener(
-    "change",
-    updateInvitationTypeVisibility
-);
+/* Listen for event checkbox changes */
+
+document.getElementById("eventBarat")
+    .addEventListener("change", updateInvitationTypeVisibility);
+
+document.getElementById("eventWalima")
+    .addEventListener("change", updateInvitationTypeVisibility);
 
 /* =========================================================
    STATE
