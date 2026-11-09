@@ -105,6 +105,22 @@ const eventBarat =
 const eventWalima =
     document.getElementById("eventWalima");
 
+    /* =========================================================
+   INVITATION TYPE CONTROLS
+========================================================= */
+
+const baratTypeGroup =
+    document.getElementById("baratTypeGroup");
+
+const walimaTypeGroup =
+    document.getElementById("walimaTypeGroup");
+
+const baratInvitationType =
+    document.getElementById("baratInvitationType");
+
+const walimaInvitationType =
+    document.getElementById("walimaInvitationType");
+
 const codePreview =
     document.getElementById("codePreview");
 
@@ -131,7 +147,29 @@ const confirmDeleteButton =
 const toast =
     document.getElementById("toast");
 
+/* =========================================================
+   INVITATION TYPE VISIBILITY
+========================================================= */
 
+function updateInvitationTypeVisibility() {
+
+    baratTypeGroup.hidden =
+        !eventBarat.checked;
+
+    walimaTypeGroup.hidden =
+        !eventWalima.checked;
+
+}
+
+eventBarat.addEventListener(
+    "change",
+    updateInvitationTypeVisibility
+);
+
+eventWalima.addEventListener(
+    "change",
+    updateInvitationTypeVisibility
+);
 
 /* =========================================================
    STATE

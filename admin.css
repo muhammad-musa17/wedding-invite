@@ -1113,3 +1113,29 @@ tbody tr:last-child td {
     }
 
 }
+
+/* Invitation type controls */
+
+#baratTypeGroup[hidden],
+#walimaTypeGroup[hidden] {
+    display: none !important;
+}
+
+#baratTypeGroup,
+#walimaTypeGroup {
+    margin-top: 18px;
+}
+
+#baratInvitationType,
+#walimaInvitationType {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(196, 165, 106, 0.35);
+    border-radius: 8px;
+
+    background: #17130f;
+    color: #f5efe4;
+
+    font: inherit;
+}
